@@ -21,12 +21,10 @@ pub fn part_1() {
 
     'outer: for rep in reports.iter() {
         let mut last_direction = 0; // 1 = increasing, -1 = decreasing
-        let still_safe = true;
         for (i, pair_lvl) in rep.windows(2).enumerate() {
             let diff = pair_lvl[0] - pair_lvl[1];
             let new_direction;
             if diff == 0 || diff.abs() > 3 {
-                if still_safe {}
                 continue 'outer;
             } else {
                 if diff > 0 {
